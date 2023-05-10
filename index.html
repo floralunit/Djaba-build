@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | DiscoDjaba</title>
+    <title>Unity WebGL Player | Диско Джаб</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">DiscoDjaba</div>
+        <div id="unity-build-title">Диско Джаб</div>
       </div>
     </div>
     <script>
@@ -57,14 +57,14 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Djaba_build.loader.js";
+      var loaderUrl = buildUrl + "/BuildPC.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Djaba_build.data",
-        frameworkUrl: buildUrl + "/Djaba_build.framework.js",
-        codeUrl: buildUrl + "/Djaba_build.wasm",
+        dataUrl: buildUrl + "/BuildPC.data",
+        frameworkUrl: buildUrl + "/BuildPC.framework.js",
+        codeUrl: buildUrl + "/BuildPC.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "DiscoDjaba",
+        companyName: "frog.dev",
+        productName: "Диско Джаб",
         productVersion: "1.0",
         showBanner: unityShowBanner,
       };
@@ -117,6 +117,10 @@
 
       document.body.appendChild(script);
 
+    </script>
+    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+    <script>
+      vkBridge.send("VKWebAppInit", {});
     </script>
   </body>
 </html>
